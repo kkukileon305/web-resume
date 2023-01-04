@@ -105,6 +105,18 @@ const Page = () => {
           <Line />
         </section>
 
+        <section id='skills' ref={element => element && (subRefs.current[3] = element)}>
+          <Subtitle content='Skills' />
+          <ul className='flex gap-2 flex-wrap py-4'>
+            {skills.map(skill => (
+              <li key={skill}>
+                <Skill skill={skill} />
+              </li>
+            ))}
+          </ul>
+          <Line />
+        </section>
+
         <section id='projects' ref={element => element && (subRefs.current[2] = element)}>
           <Subtitle content='Experience & Project' />
           <ul>
@@ -142,18 +154,6 @@ const Page = () => {
                     ))}
                   </ul>
                 </div>
-              </li>
-            ))}
-          </ul>
-          <Line />
-        </section>
-
-        <section id='skills' ref={element => element && (subRefs.current[3] = element)}>
-          <Subtitle content='Skills' />
-          <ul className='flex gap-2 flex-wrap py-4'>
-            {skills.map(skill => (
-              <li key={skill}>
-                <Skill skill={skill} />
               </li>
             ))}
           </ul>
