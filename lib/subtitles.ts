@@ -1,3 +1,3 @@
-const subtitles = ['Contact', 'About', 'Experience & Project', 'Skills', 'Education'];
+const subtitles = ['Contact', 'About', 'Skills', 'Experience & Project', 'Education'];
 
 export default subtitles;
