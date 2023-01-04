@@ -1,8 +1,7 @@
 'use client';
 
-import { AnimatePresence } from 'framer-motion';
 import { useTheme } from 'next-themes';
-import { MutableRefObject, useState } from 'react';
+import { MutableRefObject } from 'react';
 import { BsLightningFill } from 'react-icons/bs';
 import { IoMdMenu } from 'react-icons/io';
 import { Sections } from '../app/page';

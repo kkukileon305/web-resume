@@ -30,8 +30,8 @@ const Page = () => {
   const [curMenu, setcurMenu] = useState({
     contact: false,
     about: false,
-    projects: false,
     skills: false,
+    projects: false,
     education: false,
   });
 
@@ -105,7 +105,7 @@ const Page = () => {
           <Line />
         </section>
 
-        <section id='skills' ref={element => element && (subRefs.current[3] = element)}>
+        <section id='skills' ref={element => element && (subRefs.current[2] = element)}>
           <Subtitle content='Skills' />
           <ul className='flex gap-2 flex-wrap py-4'>
             {skills.map(skill => (
@@ -117,7 +117,7 @@ const Page = () => {
           <Line />
         </section>
 
-        <section id='projects' ref={element => element && (subRefs.current[2] = element)}>
+        <section id='projects' ref={element => element && (subRefs.current[3] = element)}>
           <Subtitle content='Experience & Project' />
           <ul>
             {projects.map(project => (
