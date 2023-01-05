@@ -5,6 +5,7 @@ import { MutableRefObject } from 'react';
 import { BsLightningFill } from 'react-icons/bs';
 import { IoMdMenu } from 'react-icons/io';
 import { Sections } from '../app/page';
+import scrollInto from '../lib/scrollInto';
 import subtitles from '../lib/subtitles';
 import useStore from '../store/useStore';
 
@@ -14,7 +15,7 @@ interface HeaderProps {
 }
 
 const Header = ({ curMenu, subRefs }: HeaderProps) => {
-  const { scrollInto, setMenuModal } = useStore();
+  const setMenuModal = useStore(store => store.setMenuModal);
 
   const { setTheme, theme } = useTheme();
   const toggleTheme = () => (theme === 'dark' ? setTheme('light') : setTheme('dark'));

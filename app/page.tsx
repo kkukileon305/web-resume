@@ -16,6 +16,7 @@ import useStore, { Id } from '../store/useStore';
 import { AnimatePresence } from 'framer-motion';
 import MenuModal from '../components/MenuModal';
 import ImageList from '../components/ImageList';
+import ImageModal from '../components/ImageModal';
 
 export type Sections = {
   contact: boolean;
@@ -26,7 +27,7 @@ export type Sections = {
 };
 
 const Page = () => {
-  const menuModal = useStore(store => store.menuModal);
+  const { menuModal, imageModal } = useStore(({ menuModal, imageModal }) => ({ menuModal, imageModal }));
   const subRefs = useRef<HTMLElement[]>([]);
   const [curMenu, setcurMenu] = useState({
     contact: false,
@@ -61,7 +62,10 @@ const Page = () => {
 
   return (
     <>
-      <AnimatePresence>{menuModal && <MenuModal curMenu={curMenu} subRefs={subRefs} />}</AnimatePresence>
+      <AnimatePresence>
+        {menuModal && <MenuModal curMenu={curMenu} subRefs={subRefs} />}
+        {imageModal && <ImageModal />}
+      </AnimatePresence>
       <Header curMenu={curMenu} subRefs={subRefs} />
       <main className='px-4 max-w-[1060px] mx-auto'>
         <Title

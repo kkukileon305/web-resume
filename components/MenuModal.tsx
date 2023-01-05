@@ -3,15 +3,14 @@
 import { motion } from 'framer-motion';
 import { MutableRefObject } from 'react';
 import { Sections } from '../app/page';
+import scrollInto from '../lib/scrollInto';
 import subtitles from '../lib/subtitles';
 import useStore from '../store/useStore';
 
 const MenuModal = ({ curMenu, subRefs }: { curMenu: Sections; subRefs: MutableRefObject<HTMLElement[]> }) => {
-  const { scrollInto, setMenuModal } = useStore();
+  const { setMenuModal } = useStore();
 
-  const handleClose = () => {
-    setMenuModal(false);
-  };
+  const handleClose = () => setMenuModal(false);
 
   return (
     <motion.div //

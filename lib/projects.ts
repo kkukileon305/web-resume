@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import { boardImageList, ImageList, kioskImageList, quizImageList } from './images';
+import { boardImageList, ImageSrcAndAlt, kioskImageList, quizImageList } from './images';
 
 type Project = {
   title: string;
@@ -10,7 +10,7 @@ type Project = {
   skills: string[];
   description: string[];
   type: '개인' | '팀';
-  imageList: ImageList[];
+  imageList: ImageSrcAndAlt[];
 };
 
 const projects: Project[] = [
