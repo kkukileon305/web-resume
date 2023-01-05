@@ -15,7 +15,7 @@ const ImageList = ({ imageList }: ImageListProps) => {
   };
 
   return (
-    <div className='grid grid-cols-4 grid-rows-8 gap-2 my-4'>
+    <div className='grid grid-cols-4 grid-rows-8 gap-2 mb-4'>
       <div onClick={() => openImageModal(imageList[0])} key={imageList[0].src.src} className='relative col-start-1 col-end-5 row-start-1 row-end-4 border cursor-pointer md:hover:translate-y-[-8px] md:hover:shadow-lg transition'>
         <Image src={imageList[0].src} alt={imageList[0].alt} />
       </div>
