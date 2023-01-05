@@ -17,6 +17,7 @@ import { AnimatePresence } from 'framer-motion';
 import MenuModal from '../components/MenuModal';
 import ImageList from '../components/ImageList';
 import ImageModal from '../components/ImageModal';
+import TopBtn from '../components/buttons/TopBtn';
 
 export type Sections = {
   contact: boolean;
@@ -66,6 +67,8 @@ const Page = () => {
         {menuModal && <MenuModal curMenu={curMenu} subRefs={subRefs} />}
         {imageModal && <ImageModal />}
       </AnimatePresence>
+      <TopBtn />
+
       <Header curMenu={curMenu} subRefs={subRefs} />
       <main className='px-4 max-w-[1060px] mx-auto'>
         <Title
