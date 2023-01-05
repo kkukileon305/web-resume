@@ -24,7 +24,7 @@ const ImageModal = () => {
       onClick={handleClose}
     >
       <motion.div
-        className={`min-w-[200px] ${imageModalSrc?.isMobile ? 'max-w-[400px]' : 'max-w-[1060px]'} max-h-[90vh] flex justify-center w-full rounded-xl shadow-xl`}
+        className={`min-w-[200px] ${imageModalSrc?.isMobile ? 'max-w-[400px]' : 'max-w-[1060px]'} max-h-[90vh] flex justify-center w-full shadow-xl`}
         initial={{
           y: 100,
           opacity: 0,
