@@ -1,3 +1,6 @@
+import { StaticImageData } from 'next/image';
+import { boardImageList, ImageList, kioskImageList, quizImageList } from './images';
+
 type Project = {
   title: string;
   intruduce: string;
@@ -7,6 +10,7 @@ type Project = {
   skills: string[];
   description: string[];
   type: '개인' | '팀';
+  imageList: ImageList[];
 };
 
 const projects: Project[] = [
@@ -27,6 +31,7 @@ const projects: Project[] = [
       'Modal 컴포넌트: modal 상태가 true일 경우에 렌더링되도록 구현, 나타날 경우 fixed된 어두운 배경이 최상단 z 축으로 나타나며 가운데 위치에 모달 컨테이너가 보이도록 구현, setModal을 props로 받아 어두운 배경을 클릭할 경우 닫히도록 구현, children을 props로 받아 컨테이너 내부에 렌더링되도록 구현하여 다양한 컴포넌트에서 사용할 수 있도록 구현',
     ],
     type: '개인',
+    imageList: boardImageList,
   },
   {
     title: '상식 퀴즈 웹앱',
@@ -42,6 +47,7 @@ const projects: Project[] = [
       '몇 번째 문제인지에 따라 퀴즈 리스트의 translateX 값이 변경되도록 하여 슬라이드 구현',
     ],
     type: '개인',
+    imageList: quizImageList,
   },
   {
     title: '카페 키오스크',
@@ -52,6 +58,7 @@ const projects: Project[] = [
     skills: ['TypeScript', 'Next.js', 'styled-components', 'Redux Toolkit'],
     description: ['검색시 setTimeout을 활용한 디바운싱 구현', '터치 이벤트를 활용하여 카트 슬라이드 구현'],
     type: '개인',
+    imageList: kioskImageList,
   },
 ];
 

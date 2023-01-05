@@ -15,6 +15,7 @@ import Header from '../components/Header';
 import useStore, { Id } from '../store/useStore';
 import { AnimatePresence } from 'framer-motion';
 import MenuModal from '../components/MenuModal';
+import ImageList from '../components/ImageList';
 
 export type Sections = {
   contact: boolean;
@@ -120,7 +121,7 @@ const Page = () => {
         <section id='projects' ref={element => element && (subRefs.current[3] = element)}>
           <Subtitle content='Experience & Project' />
           <ul>
-            {projects.map(project => (
+            {projects.map((project, index) => (
               <li key={project.title} className='flex flex-col md:flex-row py-4'>
                 <div className='w-full md:w-1/5 pr-4'>
                   <div className='sticky top-[68px]'>
@@ -129,7 +130,8 @@ const Page = () => {
                     <p>{project.type} 프로젝트</p>
                   </div>
                 </div>
-                <div className='w-full md:w-4/5'>
+                <div className='w-full md:w-4/5 py-4'>
+                  <ImageList imageList={project.imageList} />
                   <MinorTitle content='Introduce' />
                   <p className='mb-4'>{project.intruduce}</p>
                   <MinorTitle content='Deploy' />

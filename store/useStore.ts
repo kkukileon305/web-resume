@@ -6,6 +6,8 @@ type Store = {
   modal: boolean;
   setModal: (modal: boolean) => void;
   scrollInto: (element: HTMLElement | null) => void;
+  modalImage: string;
+  setModalImage: (modalImage: string) => void;
 };
 
 const useStore = create<Store>(set => ({
@@ -19,6 +21,8 @@ const useStore = create<Store>(set => ({
       behavior: 'smooth',
     });
   },
+  modalImage: '',
+  setModalImage: modalImage => set({ modalImage }),
 }));
 
 export default useStore;
