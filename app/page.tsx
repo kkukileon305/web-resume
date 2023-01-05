@@ -26,7 +26,7 @@ export type Sections = {
 };
 
 const Page = () => {
-  const modal = useStore(store => store.modal);
+  const menuModal = useStore(store => store.menuModal);
   const subRefs = useRef<HTMLElement[]>([]);
   const [curMenu, setcurMenu] = useState({
     contact: false,
@@ -61,7 +61,7 @@ const Page = () => {
 
   return (
     <>
-      <AnimatePresence>{modal && <MenuModal curMenu={curMenu} subRefs={subRefs} />}</AnimatePresence>
+      <AnimatePresence>{menuModal && <MenuModal curMenu={curMenu} subRefs={subRefs} />}</AnimatePresence>
       <Header curMenu={curMenu} subRefs={subRefs} />
       <main className='px-4 max-w-[1060px] mx-auto'>
         <Title

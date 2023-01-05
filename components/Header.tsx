@@ -14,7 +14,7 @@ interface HeaderProps {
 }
 
 const Header = ({ curMenu, subRefs }: HeaderProps) => {
-  const { scrollInto, setModal } = useStore();
+  const { scrollInto, setMenuModal } = useStore();
 
   const { setTheme, theme } = useTheme();
   const toggleTheme = () => (theme === 'dark' ? setTheme('light') : setTheme('dark'));
@@ -37,7 +37,7 @@ const Header = ({ curMenu, subRefs }: HeaderProps) => {
           <button onClick={toggleTheme} className='border-2 w-8 aspect-square rounded border-black dark:border-white flex justify-center items-center'>
             <BsLightningFill width={24} />
           </button>
-          <button onClick={() => setModal(true)} className='md:hidden border-2 w-8 aspect-square rounded border-black dark:border-white flex justify-center items-center'>
+          <button onClick={() => setMenuModal(true)} className='md:hidden border-2 w-8 aspect-square rounded border-black dark:border-white flex justify-center items-center'>
             <IoMdMenu />
           </button>
         </div>

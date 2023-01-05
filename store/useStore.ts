@@ -3,16 +3,16 @@ import create from 'zustand';
 export type Id = 'contact' | 'about' | 'projects' | 'skills' | 'education';
 
 type Store = {
-  modal: boolean;
-  setModal: (modal: boolean) => void;
+  menuModal: boolean;
+  setMenuModal: (menuModal: boolean) => void;
   scrollInto: (element: HTMLElement | null) => void;
   modalImage: string;
   setModalImage: (modalImage: string) => void;
 };
 
 const useStore = create<Store>(set => ({
-  modal: false,
-  setModal: modal => set({ modal }),
+  menuModal: false,
+  setMenuModal: menuModal => set({ menuModal }),
   scrollInto: (element: HTMLElement | null) => {
     if (!element) return;
 
