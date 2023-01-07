@@ -79,7 +79,7 @@ const Page = () => {
           }
         />
 
-        <section onClick={() => console.log(subRefs.current)} id='contact' ref={element => element && (subRefs.current[0] = element)}>
+        <section id='contact' ref={element => element && (subRefs.current[0] = element)}>
           <Subtitle content='Contact' />
           <MinorTitle content='Email' />
           <p>kkukileon305@gmail.com</p>
