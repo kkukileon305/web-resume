@@ -22,8 +22,9 @@ const projects: Project[] = [
     duration: '2022.12.07 - 12.10',
     skills: ['TypeScript', 'Next.js', 'Tailwindcss', 'Zustand', 'React-Query', 'Supabase'],
     description: [
-      '불필요한 중복 요청을 방지하기 위하여 React-Query를 사용하여 무한 스크롤 구현',
+      '불필요한 중복 요청을 방지하기 위하여 React-Query의 useInfiniteQuery을 사용하여 무한 스크롤 구현',
       'IntersectionObserver API를 활용하여 구현한 무한 스크롤의 로직이 길고 다른 페이지 컴포넌트에서도 사용될 것 같아 별도의 커스텀 훅으로 분리',
+      'useMutation을 활용하여 로그인, 로그아웃 구현하고 게시판 업로드 및 삭제, 댓글 업로드 및 삭제 성공시(onSuccess) 해당하는 query key들을 invalidate하여 다시 fetch하도록 구현',
       '다크모드: Theme 상태관리를 쉽게 도와주는 next-themes와 Tailwindcss를 활용하여 구현',
       '로그인: supabase의 인증 기능을 활용하여 이메일 검증 구현, 성공 시 token정보를 서버에서 보내고 프론트에서 받은 token을 zustand의 store에 저장과 동시에 localStroage에 저장하도록 구현',
       '글쓰기 페이지: 제목과 내용을 react-hook-form을 이용해 form 상태 관리와 동시에 유효성 검사 구현, 업로드 버튼 클릭 시 저장된 상태들과 token을 post요청으로 보내고 서버에서 token 인증 후 데이터를 생성하도록 구현',
