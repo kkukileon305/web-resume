@@ -1,7 +1,7 @@
 const characters: { id: number; content: string }[] = [
   {
     id: 1,
-    content: 'TypeScript와 Next.js로 개발하는 것을 선호하는 프론트엔드 개발자입니다.',
+    content: 'TypeScript와 React로 개발하는 것을 선호하는 프론트엔드 개발자입니다.',
   },
   {
     id: 2,
